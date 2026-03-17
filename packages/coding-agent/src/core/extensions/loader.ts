@@ -13,6 +13,15 @@ import { createJiti } from "@mariozechner/jiti";
 import * as _bundledPiAgentCore from "@mariozechner/pi-agent-core";
 import * as _bundledPiAi from "@mariozechner/pi-ai";
 import * as _bundledPiAiOauth from "@mariozechner/pi-ai/oauth";
+import * as _bundledPiAiAnthropic from "@mariozechner/pi-ai/providers/anthropic";
+import * as _bundledPiAiOpenAICompletions from "@mariozechner/pi-ai/providers/openai-completions";
+import * as _bundledPiAiOpenAIResponses from "@mariozechner/pi-ai/providers/openai-responses";
+import * as _bundledPiAiAzureOpenAIResponses from "@mariozechner/pi-ai/providers/azure-openai-responses";
+import * as _bundledPiAiOpenAICodexResponses from "@mariozechner/pi-ai/providers/openai-codex-responses";
+import * as _bundledPiAiGoogle from "@mariozechner/pi-ai/providers/google";
+import * as _bundledPiAiGoogleGeminiCli from "@mariozechner/pi-ai/providers/google-gemini-cli";
+import * as _bundledPiAiGoogleVertex from "@mariozechner/pi-ai/providers/google-vertex";
+import * as _bundledPiAiMistral from "@mariozechner/pi-ai/providers/mistral";
 import type { KeyId } from "@mariozechner/pi-tui";
 import * as _bundledPiTui from "@mariozechner/pi-tui";
 // Static imports of packages that extensions may use.
@@ -45,6 +54,15 @@ const VIRTUAL_MODULES: Record<string, unknown> = {
 	"@mariozechner/pi-tui": _bundledPiTui,
 	"@mariozechner/pi-ai": _bundledPiAi,
 	"@mariozechner/pi-ai/oauth": _bundledPiAiOauth,
+	"@mariozechner/pi-ai/providers/anthropic": _bundledPiAiAnthropic,
+	"@mariozechner/pi-ai/providers/openai-completions": _bundledPiAiOpenAICompletions,
+	"@mariozechner/pi-ai/providers/openai-responses": _bundledPiAiOpenAIResponses,
+	"@mariozechner/pi-ai/providers/azure-openai-responses": _bundledPiAiAzureOpenAIResponses,
+	"@mariozechner/pi-ai/providers/openai-codex-responses": _bundledPiAiOpenAICodexResponses,
+	"@mariozechner/pi-ai/providers/google": _bundledPiAiGoogle,
+	"@mariozechner/pi-ai/providers/google-gemini-cli": _bundledPiAiGoogleGeminiCli,
+	"@mariozechner/pi-ai/providers/google-vertex": _bundledPiAiGoogleVertex,
+	"@mariozechner/pi-ai/providers/mistral": _bundledPiAiMistral,
 	"@mariozechner/pi-coding-agent": _bundledPiCodingAgent,
 };
 
