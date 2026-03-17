@@ -18,9 +18,9 @@ import {
 	type OAuthCredentials,
 	type OAuthLoginCallbacks,
 	type SimpleStreamOptions,
-	streamSimpleAnthropic,
-	streamSimpleOpenAIResponses,
 } from "@mariozechner/pi-ai";
+import { streamSimpleAnthropic } from "@mariozechner/pi-ai/providers/anthropic";
+import { streamSimpleOpenAIResponses } from "@mariozechner/pi-ai/providers/openai-responses";
 import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
 
 // =============================================================================

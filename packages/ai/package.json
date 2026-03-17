@@ -17,6 +17,42 @@
 		"./bedrock-provider": {
 			"types": "./bedrock-provider.d.ts",
 			"import": "./bedrock-provider.js"
+		},
+		"./providers/anthropic": {
+			"types": "./dist/providers/anthropic.d.ts",
+			"import": "./dist/providers/anthropic.js"
+		},
+		"./providers/openai-completions": {
+			"types": "./dist/providers/openai-completions.d.ts",
+			"import": "./dist/providers/openai-completions.js"
+		},
+		"./providers/openai-responses": {
+			"types": "./dist/providers/openai-responses.d.ts",
+			"import": "./dist/providers/openai-responses.js"
+		},
+		"./providers/azure-openai-responses": {
+			"types": "./dist/providers/azure-openai-responses.d.ts",
+			"import": "./dist/providers/azure-openai-responses.js"
+		},
+		"./providers/openai-codex-responses": {
+			"types": "./dist/providers/openai-codex-responses.d.ts",
+			"import": "./dist/providers/openai-codex-responses.js"
+		},
+		"./providers/google": {
+			"types": "./dist/providers/google.d.ts",
+			"import": "./dist/providers/google.js"
+		},
+		"./providers/google-gemini-cli": {
+			"types": "./dist/providers/google-gemini-cli.d.ts",
+			"import": "./dist/providers/google-gemini-cli.js"
+		},
+		"./providers/google-vertex": {
+			"types": "./dist/providers/google-vertex.d.ts",
+			"import": "./dist/providers/google-vertex.js"
+		},
+		"./providers/mistral": {
+			"types": "./dist/providers/mistral.d.ts",
+			"import": "./dist/providers/mistral.js"
 		}
 	},
 	"bin": {
@@ -38,19 +74,28 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@anthropic-ai/sdk": "^0.73.0",
-		"@aws-sdk/client-bedrock-runtime": "^3.983.0",
-		"@google/genai": "^1.40.0",
-		"@mistralai/mistralai": "1.14.1",
 		"@sinclair/typebox": "^0.34.41",
 		"ajv": "^8.17.1",
 		"ajv-formats": "^3.0.1",
 		"chalk": "^5.6.2",
-		"openai": "6.26.0",
 		"partial-json": "^0.1.7",
 		"proxy-agent": "^6.5.0",
 		"undici": "^7.19.1",
 		"zod-to-json-schema": "^3.24.6"
+	},
+	"peerDependencies": {
+		"@anthropic-ai/sdk": "^0.73.0",
+		"@aws-sdk/client-bedrock-runtime": "^3.983.0",
+		"@google/genai": "^1.40.0",
+		"@mistralai/mistralai": "1.14.1",
+		"openai": "6.26.0"
+	},
+	"peerDependenciesMeta": {
+		"@anthropic-ai/sdk": { "optional": true },
+		"@aws-sdk/client-bedrock-runtime": { "optional": true },
+		"@google/genai": { "optional": true },
+		"@mistralai/mistralai": { "optional": true },
+		"openai": { "optional": true }
 	},
 	"keywords": [
 		"ai",
